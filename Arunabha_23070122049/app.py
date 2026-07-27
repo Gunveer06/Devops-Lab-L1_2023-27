@@ -4,7 +4,11 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World -  Main Branch Modification"}
+    return {"Hello": "World - Final Merged Version"}
+
+@app.get("/auth")
+def user_auth():
+    return {"status": "User authenticated"}
 
 if __name__ == "__main__":
     import uvicorn
