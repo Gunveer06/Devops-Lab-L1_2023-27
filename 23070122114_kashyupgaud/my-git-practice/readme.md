@@ -6,35 +6,57 @@
 
 ---
 
-## 1. Git Workflow & Collaboration
+## GIT
 
-### Task 1.1: Git Operations
-- **Uncommitted changes:** Verified untracked files in the working directory using `git status`.
-- **Staging the changes:** Staged modified and new files using `git add .`.
-- **Committed the changes:** Committed staged changes with commit message `"First Commit"`.
+### Uncommited changes
+![Uncommited changes](images/page_1_img_1.png)
 
-### Task 1.2: Branching
-- **New branch:** Created and checked out a new feature branch `feature-update` using `git checkout -b feature-update`.
-- **Committed in new branch:** Committed modifications in the feature branch with message `"First Commit to this branch"`.
+### Staging the changes
+![Staging the changes](images/page_1_img_2.png)
 
-### Task 1.3: Merge & Conflict Resolution
-- **Merging the branches:** Switched back to `master` and fast-forward merged `feature-update`.
-- **Simulating the merge Conflict:** Simulated a merge conflict between `main` and `conflict` branches by modifying the same line in both branches, then resolving the conflict manually upon merging.
+### Commited the changes
+![Commited the changes](images/page_1_img_3.png)
+
+### New branch
+![New branch](images/page_2_img_1.png)
+
+### commited in new branch
+![commited in new branch](images/page_2_img_2.png)
+
+### Merging the branches
+![Merging the branches](images/page_2_img_3.png)
+
+### Simulating the merge Conflict
+![Simulating the merge Conflict](images/page_3_img_1.png)
 
 ---
 
-## 2. Jira Project & Issue Tracking
+## Jira
 
-- **My Scrum Space:** Set up a Scrum project in Jira Cloud.
-- **Create Story:** Created user stories, tasks, and bug issues.
-- **Backlog Tasks:** Managed sprint planning and backlog tasks.
+### My Scrum Space
+![My Scrum Space](images/page_3_img_2.png)
+
+### Create Story
+![Create Story](images/page_4_img_1.png)
+
+### Backlog Tasks
+![Backlog Tasks](images/page_5_img_1.png)
 
 ---
 
-## 3. Basic Containerization (Docker) & Jenkins
+## Docker & Jenkins
 
-- **Creating Docker Image:** Built Docker image `flask-hello` locally from the `Dockerfile`.
-- **Checking Image Status:** Verified image build and checked image details.
-- **Running Docker Image:** Successfully ran the Docker container mapping port `5000:5000`.
-- **Jenkins Bash Commands:** Configured Jenkins Freestyle job execute batch command.
-- **Jenkins Console Output:** Verified build log output showing successful execution.
+### Creating docker Image
+![Creating docker Image](images/page_5_img_2.png)
+
+### Checking image status
+![Checking image status](images/page_6_img_1.png)
+
+### Running Docker Image
+![Running Docker Image](images/page_6_img_2.png)
+
+### Jenkins Bash Commands
+![Jenkins Bash Commands](images/page_6_img_3.png)
+
+### Jenkins Console Output
+![Jenkins Console Output](images/page_6_img_4.png)
