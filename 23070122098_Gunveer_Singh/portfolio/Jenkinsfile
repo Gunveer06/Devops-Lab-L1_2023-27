@@ -1,0 +1,60 @@
+pipeline {
+    agent any
+
+    tools {
+        // Ensure Maven and JDK 21 are configured in Jenkins Global Tool Configuration
+        // Adjust the names to match your Jenkins setup
+        maven 'Maven 3.9'
+        jdk 'JDK 21'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from Git
+                checkout scm
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                // Compile the Java code
+                echo 'Compiling the project...'
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run JUnit tests
+                echo 'Running unit tests...'
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    // Publish test results
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
+
+        stage('Package') {
+            steps {
+                // Package the application into an executable JAR
+                echo 'Packaging the application...'
+                sh 'mvn package -DskipTests'
+            }
+        }
+    }
+
+    post {
+        success {
+            // Archive the generated JAR artifact
+            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Check the logs.'
+        }
+    }
+}
