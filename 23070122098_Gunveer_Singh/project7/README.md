@@ -57,7 +57,7 @@ kubectl apply -f mongo.yaml
 kubectl apply -f mongo-express.yaml
 ```
 
-## Verification and Access
+## Verification
 
 Verify your deployment with these commands:
 
@@ -69,23 +69,7 @@ kubectl get configmaps
 kubectl get secrets
 ```
 
-### Accessing the Mongo Express UI
-
-We successfully deployed the cluster and set up a port-forwarding process to bypass virtual network limits and access the UI directly on `localhost`.
-
-To map the NodePort service to your local machine, run:
-
-```bash
-kubectl port-forward svc/mongo-express-service 30081:8081
-```
-
-Then, open your browser and navigate to **http://localhost:30081**.
-
-**Web UI Login:**
-- **Username:** `admin`
-- **Password:** `pass`
-
-*(Note: The Mongo Express backend connects to MongoDB automatically using the `admin` / `password` root credentials we stored securely in `mongo-secret.yaml`!)*
+To access the Mongo Express UI, open your browser and navigate to `http://<minikube-ip>:30081`. Use `minikube ip` to find your cluster's IP address if using Minikube.
 
 ## Expected Output
 
@@ -106,3 +90,4 @@ service/mongo-express-service   NodePort    10.96.234.56     <none>        8081:
 - **ImagePullBackOff**: `kubectl describe pod <pod-name>` (check Events)
 - **Service not reachable**: `kubectl get endpoints mongodb-service`
 - **Secret/ConfigMap not loading**: `kubectl describe pod <pod-name>`
+

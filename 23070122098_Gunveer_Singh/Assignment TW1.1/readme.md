@@ -31,10 +31,7 @@ git commit -m "Initial commit"
 - Git repository initialized.
 - Flask Hello World application committed to the main branch.
 
-**Screenshots:** 
-![uncommited changes](uncommited.png)
-![staging changes](staging.png)
-![commited changes](commited.png)
+**Screenshot:** `screenshots/01_git_init.png`
 
 ---
 
@@ -54,8 +51,7 @@ git commit -m "Added authentication feature"
 git push origin feature/user-auth
 ```
 
-**Screenshot:**
-![feature branch](more_ss.png)
+**Screenshot:** `screenshots/02_feature_branch.png`
 
 ---
 
@@ -80,8 +76,7 @@ git commit -m "Resolved merge conflict"
 git push origin main
 ```
 
-**Screenshot:**
-![merge conflict](more_ss.png)
+**Screenshot:** `screenshots/03_merge_conflict.png`
 
 ---
 
@@ -115,4 +110,4 @@ git pull
 
 # Conclusion
 
-Successfully implemented Git workflow using feature branches, commits, merging, merge conflict resolution, and GitHub remote repository.
+Successfully implemented Git workflow using feature branches, commits, merging, merge conflict resolution, and GitHub remote repository.![alt text](image.png)
